@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Accidental Loud Sounds</title>
+<style>
+body{
+    font-family: Arial;
+    background: linear-gradient(to right, #ff4e50, #f9d423);
+    text-align: center;
+    color: white;
+}
+
+.container{
+    margin-top: 100px;
+}
+
+button{
+    padding: 20px 40px;
+    font-size: 20px;
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+
+button:hover{
+    background: black;
+    color: white;
+}
+
+h1{
+    font-size: 40px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>🔊 Loud Accidental Sounds</h1>
+
+<p>Click buttons to play loud accidental sounds</p>
+
+<button onclick="playGlass()">Breaking Glass</button>
+
+<button onclick="playCrash()">Car Crash</button>
+
+<audio id="glass" src="https://www.soundjay.com/mechanical/sounds/glass-breaking-01.mp3"></audio>
+
+<audio id="crash" src="https://www.soundjay.com/mechanical/sounds/car-crash-01.mp3"></audio>
+
+</div>
+
+<script>
+
+function playGlass(){
+    let sound = document.getElementById("glass");
+    sound.volume = 1.0;
+    sound.play();
+}
+
+function playCrash(){
+    let sound = document.getElementById("crash");
+    sound.volume = 1.0;
+    sound.play();
+}
+
+</script>
+
+</body>
+</html>
